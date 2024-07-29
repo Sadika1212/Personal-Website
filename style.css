@@ -10,7 +10,6 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none; border:none;
-    
     transition: all .2s linear;
 }
 
@@ -92,6 +91,7 @@ header{
     justify-content: center;
     flex-flow: column;
     text-align: center;
+    padding-top: 3rem;
 }
 
 header .user img{
@@ -207,9 +207,8 @@ header .navbar ul li a:hover{
 
 .education .box-container .edu1{
     color: #eee;
-    margin:-5rem 7rem;
+    margin:-2rem 7rem;
     font-size: 3rem;
-    /* margin-top: 0rem; */
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
@@ -220,13 +219,13 @@ header .navbar ul li a:hover{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding:2rem 0;
+    padding:1rem 0;
+    margin-top: 2rem;
     padding-left: 3rem;
-    margin-top: 1.5rem;
 }
 .education .box-container .cert{
     color: #eee;
-    margin:8rem 7rem;
+    margin:5rem 7rem;
     font-size: 1.5rem;
     padding-left: 3.5rem;
     justify-content: center;
@@ -262,11 +261,21 @@ header .navbar ul li a:hover{
     background:#222;
     color:#fff;
     border-radius: 5rem;
-    padding:.5rem 2.5rem;
+    padding:.5rem 1.8rem;
+}
+.education .box-container p span,.projects .box-container a span,
+.education .box-container .box a span, .res .box-container a span{
+    font-size: 1.3rem;
+    background:#222;
+    /* background:#f9ca24; */
+    color:#f9ca24;
+    border-radius: 5rem;
+    padding:0 1.8rem;
 }
 
+
 .education .box-container .box h3{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color:#fff;
     padding-top: 1.5rem;
 }
@@ -329,14 +338,7 @@ header .navbar ul li a:hover{
 }
 
 .Experience  .box-container .cont .box,
-.projects .box-container .cont .box{
-    height: 18rem;
-    width:24rem;
-    border-radius: 1rem;
-    margin:2rem;
-    overflow: hidden;
-    cursor: pointer;
-}
+.projects .box-container .cont .box,
 .res .box-container .cont .box{
     height: 10rem;
     width:16rem;
@@ -371,12 +373,13 @@ header .navbar ul li a:hover{
     margin-top: 8rem;
 }
 .portfolio .box-container li{
-    font-size: 1.8rem;
-    padding-bottom: 1.8rem;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
 }
-
-
-
+.portfolio{
+    min-height: 38vh;
+    padding:1rem;
+}
 .contact .row{
     display: flex;
     align-items: center;
@@ -386,15 +389,16 @@ header .navbar ul li a:hover{
 
 .contact .row .content{
     flex:1 1 30rem;
-    padding:4rem;
+    margin-top: -8rem;
+    padding-left:4rem;
     padding-bottom: 0;
     }
 .contact .row form{
     flex:1 1 45rem;
     padding:2rem;
     margin:2rem;
-    margin-right: 17rem;
-    margin-top: 10rem;
+    margin-right: 12rem;
+    margin-top: 5rem;
 }
 
 .contact .row form .box{
@@ -403,7 +407,7 @@ header .navbar ul li a:hover{
     background:rgba(131, 130, 130, 0.2);
     color:#fff;
     text-transform: none;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     width:100%;
 }
 
@@ -421,11 +425,11 @@ header .navbar ul li a:hover{
     color:#fff;
     margin-left: 3rem;
     font-size: 2.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
-.contact .heading{
-    margin-top: -20rem;
-}
+/* .contact .heading{
+    margin-top: -25rem;
+} */
 .contact .row .content .info h3{
     display: flex;
     align-items: center;
@@ -468,7 +472,6 @@ header .navbar ul li a:hover{
     margin: 0 auto;
     position: relative;
   }
-  
   .timeline ul {
     list-style: none;
 
@@ -482,9 +485,6 @@ header .navbar ul li a:hover{
     justify-content: center;
     margin-bottom: 20px;
   }
-
-
-
   .timeline ul li:last-child {
     margin-top: 0px;
   }
@@ -578,78 +578,114 @@ header .navbar ul li a:hover{
 
 
 /* media queries  */
-
-@media (max-width:1200px){
-
+@media (max-width:1302px){
     html{
         font-size: 55%;
     }
     header{
-        padding-left:4rem;
+        padding-left:1rem;
     }
     .home{
-        padding:1rem 4rem;
-        padding-right: 4rem;
+        padding:1rem 7rem;
+        padding-right: 11rem;
     }
-
 }
-
+@media (max-width:1146px){
+    .contact .row .content{
+        flex:1 1 10rem;
+        margin-top: -7rem;
+        margin-left: -3rem;}
+    .contact .row form{
+        flex:1 1 23rem;
+        padding:1rem;
+        margin-right: 10rem;
+        margin-top: 8rem;
+    }
+    .Experience .box-container .table_component{
+        width: 92%;
+    }
+    .portfolio .box-container li{
+        font-size: 1.35rem;
+    }
+}
+@media (max-width:1056px){
+    html{
+        font-size: 50%;
+    }
+    .projects .heading img, .portfolio .heading img,
+    .res .heading img, .education .heading img,
+    .Experience .heading img{
+        height: 3rem;
+    }
+    .res .box-container .icon img{
+        height: 2.8rem;
+    }
+}
 @media (max-width:780px){
-
    header{
-       left:-120%;
-   }
-
+       left:-80%;
+   } 
    #menu{
        display: block;
-   }
-
+   } 
    header.toggle{
     left:0%;
    }
-
    body{
-       padding:0;
+       padding:5rem;
    }
-
+.education .box-container, .Experience .box-container, .res .box-container,
+ .projects .box-container, .portfolio .box-container{
+    margin:5rem -1rem;
 }
-
-@media (max-width:768px){
+.home{
+    margin-top:-6rem;
+}
+} 
+/* @media (max-width:768px){
 
     html{
         font-size: 45%;
     }
-    .home{
-        margin-top:4rem;
-    }
  
- }
+ } */
 
-@media (max-width:400px){
-
+  @media (max-width:426px){
     header{
-        width: 100vw;
+        left:-80%;
+    } 
+    .home{
+        padding-right: 2rem;
+        margin-left: -5rem;
     }
-    html{
-        font-size: 40%;
-    }
-    .heading{
-        margin:0 3rem;
-    }
-    .education .box-container .box{
-        width:100%;
-    }
-
-    .portfolio .box-container .box{
-        width:100%;
-    }
-    .education .box-container .cert{
-        margin-left: 4rem;
-        padding-right: 3rem;
-    }
-
+    .contact .row .content{
+        margin-top: 1.5rem;
+        }
     .contact .row form{
-        margin:3rem 0;
-    }
+        margin-top: -1rem;
+        }
+    .heading{
+            margin:0 3rem;
+        }
+    html{
+            font-size: 40%;
+        }
+    .projects .heading img, .portfolio .heading img,
+        .res .heading img, .education .heading img,
+        .Experience .heading img{
+            height: 3.6rem;
+        }
+    .res .box-container .icon img{
+            height: 2.8rem;
+        }
+    .education .box-container, .Experience .box-container, .res .box-container,
+        .projects .box-container, .portfolio .box-container{
+           margin:1rem -3rem;
+        }
+        .education .box-container .cert{
+            margin:5rem;
+            padding-left: 3.5rem;
+            margin-left: 4rem;
+        }
+ } 
 
- }
